@@ -1,0 +1,124 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheer Up, Love! ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+        }
+        h1 {
+            color: #ff4b5c;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        button {
+            background: #ff4b5c;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(255, 75, 92, 0.4);
+        }
+        button:hover {
+            transform: scale(1.1);
+            background: #ff1e42;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ff4b5c;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .heart {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 40px;
+            color: #ff4b5c;
+            animation: bounce 1.5s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .emoji-container {
+            font-size: 50px;
+            margin-top: 20px;
+            animation: pop 1s infinite alternate;
+        }
+        @keyframes pop {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="heart">❤️</span>
+        <h1>Hey Cutiee Prerna! 😊</h1>
+        <p>Feeling down? Let me remind you how amazing you are! 💖</p>
+        <button id="cheerButton">Click for a Surprise! 🎁</button>
+        <div id="message"></div>
+        <div class="emoji-container" id="emoji">💖</div>
+    </div>
+    <script>
+        document.getElementById("cheerButton").addEventListener("click", function() {
+            const messages = [
+                "You are the sunshine on my darkest days! ☀️",
+                "You make the world a better place just by being in it! 💕",
+                "Your smile is my favorite thing in the world! 😊",
+                "You are stronger than you think and loved more than you know! 💖",
+                "No matter what happens, I am always here for you! 🥰",
+                "Your laughter is my favorite sound in the universe! 🎶",
+                "You radiate happiness and joy everywhere you go! 🌸",
+                "You make my world brighter just by being you! 🌟",
+                "Your kindness and love inspire me every day! 💗"
+            ];
+            const emojis = ["💖", "😊", "🌸", "💕", "🥰", "🌟", "🎶", "☀️"];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+            
+            document.getElementById("message").innerText = randomMessage;
+            document.getElementById("emoji").innerText = randomEmoji;
+        });
+    </script>
+</body>
+</html>
